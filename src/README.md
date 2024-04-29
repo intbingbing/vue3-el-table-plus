@@ -14,7 +14,7 @@ npm install vue3-el-table-plus
 
 ```javascript
 // main.js
-import TablePlus from 'vue3-el-table-plus'
+import TablePlus from 'vue3-el-table-plus.es.js'
 app.use(TablePlus)
 ```
 
