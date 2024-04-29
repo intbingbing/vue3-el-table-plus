@@ -3,6 +3,7 @@
 The table component based on vue3.0 and element-plus package includes conditional query function, table function and paging function. The code transparently transmits all attributes to the native el-table, so it is compatible with the el-table API. Use configurable mode to quickly complete data requests, conditional queries, paging queries and other functions.
 
 基于vue3.0和element-plus封装的表格组件，包含了条件查询功能、表格功能和分页功能。代码将属性全部透传到原生的el-table上，因此兼容el-table的api。采用可配置模式快速完成数据请求，条件查询，分页查询等功能。
+![1714393907714](https://file+.vscode-resource.vscode-cdn.net/c%3A/code/vue3-project/image/README/1714393907714.png)
 
 ## Install
 
