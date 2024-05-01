@@ -80,7 +80,6 @@ const { columns, condition, queryFunction, span, layout, paginationSize, data } 
   },
   queryFunction: {
     type: Function,
-    default: [],
     required: false
   },
   span: {

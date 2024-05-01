@@ -10,7 +10,7 @@ The table component based on vue3.0 and element-plus package includes conditiona
 npm install vue3-el-table-plus
 ```
 
-# Usage
+## Usage
 
 ```javascript
 // main.js
@@ -23,7 +23,18 @@ app.use(TablePlus)
 <TablePlus :columns="columns" :condition="condition" :queryFunction="queryFunction"> </TablePlus>
 ```
 
-# QuickStart
+## API
+
+### TablePlus属性
+
+6
+
+| 属性名 | 描述说明 | 类型 | 默认值 |
+| ------ | -------- | ---- | ------ |
+|        |          |      |        |
+|        |          |      |        |
+
+## QuickStart
 
 ```html
 <!-- .vue -->
@@ -160,7 +171,7 @@ export const user = {
 }
 ```
 
-# Slot configuration
+## Slot configuration
 
 ```html
 <!-- .vue -->

@@ -3,6 +3,9 @@
 The table component based on vue3.0 and element-plus package includes conditional query function, table function and paging function. The code transparently transmits all attributes to the native el-table, so it is compatible with the el-table API. Use configurable mode to quickly complete data requests, conditional queries, paging queries and other functions.
 
 基于vue3.0和element-plus封装的表格组件，包含了条件查询功能、表格功能和分页功能。代码将属性全部透传到原生的el-table上，因此兼容el-table的api。采用可配置模式快速完成数据请求，条件查询，分页查询等功能。
+
+## Screenshot
+
 ![1714393907714](https://github.com/intbingbing/vue3-el-table-plus/blob/main/public/preview.jpg)
 
 ## Install
@@ -11,7 +14,7 @@ The table component based on vue3.0 and element-plus package includes conditiona
 npm install vue3-el-table-plus
 ```
 
-# Usage
+## Usage
 
 ```javascript
 // main.js
@@ -24,7 +27,25 @@ app.use(TablePlus)
 <TablePlus :columns="columns" :condition="condition" :queryFunction="queryFunction"> </TablePlus>
 ```
 
-# QuickStart
+## API
+
+### TablePlus属性
+
+| 属性名         | 描述说明                                     | 类型                 | 默认值    |
+| :------------- | :------------------------------------------- | :------------------- | --------- |
+| columns        | 列配置见下                                   | Array                | []        |
+| condition      | 条件查询配置                                 | Array                | []        |
+| queryFunction  | 查询方法                                     | Function             | -         |
+| data           | 仅静态数据展示时使用，条件查询和分页将不可用 | Array                | null      |
+| span           | 控制条件查询区各表单项的宽度占比，参考el-row | Number               | 8         |
+| layout         | 控制表单标签位置                             | 'inside'\|'outside'  | 'outside' |
+| paginationSize | 设置分页组件为基本型或完整型                 | 'mini'\|'integrated' | 'mini'    |
+
+### columns和condition配置
+
+参考QuickStart下的table.config.js
+
+## QuickStart
 
 ```html
 <!-- .vue -->
@@ -67,11 +88,11 @@ app.use(TablePlus)
 export const user = {
   columns: [
     /**
-     * columns基本配置项
-     * @param {String} title 标签值
-     * @param {String} dataIndex 索引值
-     * @param {String} renderType ( '' | 'selection' | 'slot' ) => ( 默认 | 选择器列 | 自定义列 )
-     * @param {Function} formatter 格式化函数
+     * @desc columns基本配置项
+     * @param {String} title 必填项 标签值
+     * @param {String} dataIndex 必填项 索引值
+     * @param {String} renderType 选填项 ( '' | 'selection' | 'slot' ) => ( 默认 | 选择器列 | 自定义列 )
+     * @param {Function} formatter 选填项 格式化函数
      * 其余所有字段、方法都将透传至原生el-table
      */
     {
@@ -161,7 +182,7 @@ export const user = {
 }
 ```
 
-# Slot configuration
+## Slot configuration
 
 ```html
 <!-- .vue -->
