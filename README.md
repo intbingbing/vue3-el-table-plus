@@ -33,17 +33,13 @@ app.use(TablePlus)
 
 | 属性名         | 描述说明                                     | 类型                 | 默认值    |
 | :------------- | :------------------------------------------- | :------------------- | --------- |
-| columns        | 列配置见下                                   | Array                | []        |
-| condition      | 条件查询配置                                 | Array                | []        |
+| columns        | 参考QuickStart的table.config.js              | Array                | []        |
+| condition      | 参考QuickStart的table.config.js              | Array                | []        |
 | queryFunction  | 查询方法                                     | Function             | -         |
 | data           | 仅静态数据展示时使用，条件查询和分页将不可用 | Array                | null      |
 | span           | 控制条件查询区各表单项的宽度占比，参考el-row | Number               | 8         |
 | layout         | 控制表单标签位置                             | 'inside'\|'outside'  | 'outside' |
 | paginationSize | 设置分页组件为基本型或完整型                 | 'mini'\|'integrated' | 'mini'    |
-
-### columns和condition配置
-
-参考QuickStart下的table.config.js
 
 ## QuickStart
 
