@@ -70,12 +70,12 @@ defineOptions({
 const { columns, condition, queryFunction, span, layout, paginationSize, data } = defineProps({
   columns: {
     type: Array,
-    default: [],
+    default: () => [],
     required: true
   },
   condition: {
     type: Array,
-    default: [],
+    default: () => [],
     required: false
   },
   queryFunction: {

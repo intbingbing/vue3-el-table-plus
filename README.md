@@ -52,11 +52,9 @@ app.use(TablePlus)
   import { requestMock } from './api'
   import { user } from './table.config.js'
   const { columns, condition } = user
-  // 请求函数返回值为Promise
-  const queryFunction = (params) =>
-    new Promise(async (resolve, reject) => {
-      // 此处可拦截请求参数，并对参数进行处理，默认抛出的参数结构如下
-      /* 
+  const queryFunction = async (params) => {
+    // 此处可拦截请求参数，并对参数进行处理，默认抛出的参数结构如下
+    /* 
     params: {
       pagination: {
         currentPage: 1,
@@ -67,14 +65,10 @@ app.use(TablePlus)
       }
     }
     */
-      const body = JSON.parse(JSON.stringify(params))
-      try {
-        const data = await requestMock({ ...body.pagination, ...body.query })
-        return resolve(data)
-      } catch (e) {
-        return reject(e)
-      }
-    })
+    const body = JSON.parse(JSON.stringify(params))
+    const data = await requestMock({ ...body.pagination, ...body.query })
+    return data
+  }
 </script>
 ```
 
